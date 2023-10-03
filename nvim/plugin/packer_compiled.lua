@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "C:/Users/abrown/AppData/Local/nvim-data/site/pack/packer/start/feline.nvim",
     url = "https://github.com/feline-nvim/feline.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "C:/Users/abrown/AppData/Local/nvim-data/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "C:/Users/abrown/AppData/Local/nvim-data/site/pack/packer/start/harpoon",
@@ -148,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:/Users/abrown/AppData/Local/nvim-data/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "C:/Users/abrown/AppData/Local/nvim-data/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,

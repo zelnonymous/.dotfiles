@@ -27,14 +27,17 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+vim.keymap.set("n", "<leader>s", ":w<CR>")
+vim.keymap.set("n", "<leader>a", ":wa<CR>")
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-vim.keymap.set("n", "<C-i>", "<Cmd>set ignorecase! ignorecase?<CR>")
+-- vim.keymap.set("n", "<C-i>", "<Cmd>set ignorecase! ignorecase?<CR>")
 
 vim.keymap.set("n", "<leader>go", function()
     vim.fn.system("Powershell Start-Process http://localhost:5089") 
@@ -42,6 +45,7 @@ end)
 vim.keymap.set("n", "<leader>no", function()
     vim.fn.system("curl http://localhost:5089") 
 end)
+
 vim.keymap.set("n", "<leader>c", ":!dotnet build<CR>")
 vim.keymap.set("n", "<leader>g", ":.cc<CR>", opts)
 

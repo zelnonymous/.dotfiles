@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
      -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   } 
-  use 'Mofiqul/vscode.nvim'
+  use('Mofiqul/vscode.nvim')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 	  }
   }
+  use('Decodetalkers/csharpls-extended-lsp.nvim')
   use('mfussenegger/nvim-dap')
   use('rcarriga/nvim-dap-ui', {requires = 'mfussenegger/nvim-dap'})
   use('jay-babu/mason-nvim-dap.nvim')

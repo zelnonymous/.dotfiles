@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "C:/Users/abrown/AppData/Local/nvim-data/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["csharpls-extended-lsp.nvim"] = {
+    loaded = true,
+    path = "C:/Users/abrown/AppData/Local/nvim-data/site/pack/packer/start/csharpls-extended-lsp.nvim",
+    url = "https://github.com/Decodetalkers/csharpls-extended-lsp.nvim"
+  },
   ["feline.nvim"] = {
     loaded = true,
     path = "C:/Users/abrown/AppData/Local/nvim-data/site/pack/packer/start/feline.nvim",

@@ -18,24 +18,23 @@ local cmp = require('cmp')
 cmp.setup({
   window = {
     completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered()
+    documentation = cmp.config.window.bordered(),
+    hint = cmp.config.window.bordered()
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
     ['<Tab>'] = cmp.mapping.confirm({ select = true }),
     ["<C-Space>"] = cmp.mapping.complete(),
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
   })
 })
-
-lsp_zero.set_preferences({
-    suggest_lsp_servers = false,
-    sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
+lsp_zero.set_sign_icons({
+    error = '',
+    warn = '',
+    hint = ':',
+    info = '',
 })
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -59,3 +58,4 @@ lsp_zero.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+

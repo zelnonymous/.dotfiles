@@ -8,7 +8,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {},
+  ensure_installed = { 'csharp_ls', 'gopls' },
   handlers = {
     lsp_zero.default_setup,
   },
@@ -58,4 +58,21 @@ lsp_zero.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+require('lspconfig').csharp_ls.setup({
+    on_attach = (function(client, bufnr)
+        vim.keymap.set("n", "<leader>go", function()
+            vim.fn.system("Powershell Start-Process http://localhost:5089") 
+        end)
+        vim.keymap.set("n", "<leader>no", function()
+            vim.fn.system("curl http://localhost:5089") 
+        end)
+        vim.keymap.set("n", "<leader>c", ":!dotnet build<CR>")
+    end),
+});
+require('lspconfig').gopls.setup({
+    on_attach = (function(client, bufnr)
+        vim.keymap.set("n", "<leader>go", ":!go run .<CR>")
+    end)
+});
 

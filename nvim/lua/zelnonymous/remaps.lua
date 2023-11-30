@@ -39,13 +39,5 @@ end)
 
 -- vim.keymap.set("n", "<C-i>", "<Cmd>set ignorecase! ignorecase?<CR>")
 
-vim.keymap.set("n", "<leader>go", function()
-    vim.fn.system("Powershell Start-Process http://localhost:5089") 
-end)
-vim.keymap.set("n", "<leader>no", function()
-    vim.fn.system("curl http://localhost:5089") 
-end)
-
-vim.keymap.set("n", "<leader>c", ":!dotnet build<CR>")
 vim.keymap.set("n", "<leader>g", ":.cc<CR>", opts)
 

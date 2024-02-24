@@ -42,3 +42,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.opt.shellslash = true
+
+vim.filetype.add({ extension = { templ = "templ" } })

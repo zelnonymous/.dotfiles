@@ -8,7 +8,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'csharp_ls', 'gopls' },
+  ensure_installed = { 'csharp_ls', 'gopls', 'templ' },
   handlers = {
     lsp_zero.default_setup,
   },
@@ -75,4 +75,7 @@ require('lspconfig').gopls.setup({
         vim.keymap.set("n", "<leader>go", ":!go run .<CR>")
     end)
 });
-
+require('lspconfig').templ.setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+});

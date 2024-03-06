@@ -22,10 +22,8 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-if vim.fn.has("WIN32") or vim.vn.has("WIN64") then
-    vim.opt.undodir = os.getenv("HOMEDRIVE").. "\\" 
-        .. os.getenv("HOMEPATH") ..
-        "\\vim-undo"
+if vim.fn.has("WIN32") > 0 or vim.fn.has("WIN64") > 0 then
+    vim.opt.undodir = os.getenv("HOMEDRIVE").. "\\" .. os.getenv("HOMEPATH") .. "\\vim-undo"
 else
     vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end
@@ -42,3 +40,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.opt.shellslash = true
+
+vim.filetype.add({ extension = { templ = "templ" } })

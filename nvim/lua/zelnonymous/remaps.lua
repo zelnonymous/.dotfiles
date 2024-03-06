@@ -39,4 +39,4 @@ end)
 vim.keymap.set("n", "<C-i>", "<Cmd>set ignorecase! ignorecase?<CR>")
 
 vim.keymap.set("n", "<leader>g", ":.cc<CR>", opts)
-
+vim.keymap.set("t", "<C-i>", "<C-\\><C-n>", opts)
